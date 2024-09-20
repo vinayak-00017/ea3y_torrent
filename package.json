@@ -1,11 +1,15 @@
 {
   "name": "ea3y_torrent",
   "version": "1.0.0",
+  "type": "module",
   "description": "custom bittorrent client ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "vinayak",
+  "license": "ISC",
+  "dependencies": {
+    "bencode": "^4.0.0"
+  }
 }
