@@ -1,9 +1,10 @@
 'use strict';
-import bencode from 'bencode';
-import fs from 'fs';
-import getPeers from './tracker';
 
-const torrent = bencode.decode(fs.readFileSync('puppy.torrent'), 'utf8');
+import getPeers from './tracker.js';
+import {open} from './torrent-parser.js';
+
+const torrent = open('big-buck-bunny.torrent');
+console.log(torrent.announce.toString('utf8'))
 
 getPeers(torrent, peers => {
     console.log('list of peers: ', peers)
